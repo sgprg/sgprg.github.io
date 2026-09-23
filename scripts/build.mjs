@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, cp } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import path from "node:path";
 import { validateProfile, escapeHtml as e } from "./profile.mjs";
+import { createHash } from "node:crypto";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
 const arrow = '<span aria-hidden="true">↗</span>';
@@ -66,10 +67,33 @@ export async function build({
   const p =
     profile ??
     JSON.parse(await readFile(path.join(root, "content/profile.json"), "utf8"));
-  const html = renderProfile(p),
+  let html = renderProfile(p),
     cv = renderCv(p);
   await mkdir(path.join(directory, "cv"), { recursive: true });
   await cp(path.join(root, "public"), directory, { recursive: true });
+  const assetNames = new Map();
+  for (const file of [
+    "assets/inter-latin.woff2",
+    "assets/favicon.svg",
+    "assets/sergey-goncharov.jpg",
+    "app.js",
+    "cv.js",
+    "style.css",
+    "cv.css",
+  ]) {
+    let bytes = await readFile(path.join(root, "public", file));
+    if (file.endsWith(".css")) {
+      let css = bytes.toString("utf8");
+      for (const [original, versioned] of assetNames) css = css.replaceAll(`./${original}`, `./${versioned}`);
+      bytes = Buffer.from(css);
+    }
+    const digest = createHash("sha256").update(bytes).digest("hex").slice(0, 12);
+    const versioned = file.replace(/(\.[^.]+)$/, `.${digest}$1`);
+    assetNames.set(file, versioned);
+    await writeFile(path.join(directory, versioned), bytes);
+    html = html.replaceAll(`="./${file}"`, `="./${versioned}"`);
+    cv = cv.replaceAll(`="../${file}"`, `="../${versioned}"`);
+  }
   await writeFile(path.join(directory, "index.html"), html);
   await writeFile(path.join(directory, "cv/index.html"), cv);
   await writeFile(path.join(directory, ".nojekyll"), "");
