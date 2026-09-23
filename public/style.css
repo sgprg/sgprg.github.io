@@ -664,9 +664,6 @@ footer {
   font-size: 0.75rem;
   color: var(--muted);
 }
-.owner-link {
-  font-size: 0.75rem;
-}
 .skip-link {
   position: fixed;
   left: 20px;
@@ -1133,9 +1130,6 @@ footer {
     font-size: 0.75rem;
     flex-direction: column;
     gap: 13px;
-  }
-  .owner-link {
-    margin-top: 10px;
   }
 }
 @media (max-width: 650px) {

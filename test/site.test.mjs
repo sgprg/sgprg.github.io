@@ -19,7 +19,7 @@ const original = JSON.parse(
   await readFile(path.join(root, "content/profile.json"), "utf8"),
 );
 test("unsafe URL schemes are rejected in all published link locations", () => {
-  for (const key of ["bookingUrl", "linkedin", "github", "siteUrl"]) {
+  for (const key of ["bookingUrl", "linkedin", "siteUrl"]) {
     const p = structuredClone(original);
     p[key] = "javascript:alert(1)";
     assert.throws(() => validateProfile(p), /https/);

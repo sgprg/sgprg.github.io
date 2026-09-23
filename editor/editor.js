@@ -48,7 +48,6 @@ const groups = [
     fields: [
       "bookingUrl",
       "linkedin",
-      "github",
       "siteUrl",
       "contactTitle",
       "contactText",
@@ -242,7 +241,7 @@ function field(path, value) {
   input.name = path.join(".");
   if (input.tagName === "INPUT")
     input.type =
-      ["url", "bookingUrl", "linkedin", "github", "siteUrl"].includes(key)
+      ["url", "bookingUrl", "linkedin", "siteUrl"].includes(key)
         ? "url"
         : "text";
   input.required = key !== "url";

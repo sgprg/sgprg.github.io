@@ -11,7 +11,6 @@ export function validateProfile(p) {
     "location",
     "bookingUrl",
     "linkedin",
-    "github",
     "siteUrl",
     "headline",
     "intro",
@@ -38,7 +37,7 @@ export function validateProfile(p) {
         `${label} must be a complete https URL without credentials.`,
       );
   };
-  for (const key of ["bookingUrl", "linkedin", "github", "siteUrl"])
+  for (const key of ["bookingUrl", "linkedin", "siteUrl"])
     secureUrl(p[key], key);
   if (
     !/^\d{4}-\d{2}-\d{2}$/.test(p.updated) ||

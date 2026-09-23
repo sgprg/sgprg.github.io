@@ -30,7 +30,7 @@ npm run publish
 
 This checks the destination, runs tests, builds, commits changes to the profile and portrait, and pushes to `main`. It requires GitHub Git authentication already configured. It refuses unrelated staged changes, uncommitted code changes, another branch, or remote commits you have not pulled. If a push fails, the local commit remains; correct authentication or pull the newer changes, then retry. The command reports the Actions URL; the site becomes live only after the deployment succeeds.
 
-The visual editor runs **only on your computer**. There is no public write API, stored browser token or online admin password. The public footer's “Edit content” opens GitHub's authenticated editor.
+The visual editor runs **only on your computer**. There is no public write API, stored browser token or online admin password. Use the owner links in this README or the local editor to edit on GitHub; the public biography and CV do not expose editing or GitHub profile links.
 
 ## Content
 
@@ -57,6 +57,18 @@ npm run dev
 Preview at http://127.0.0.1:4321/. The server binds to loopback. Restart `npm run dev` after source edits to rebuild, or run `npm run build` and refresh the page. A built `dist/` directory works on any static host. There are no runtime dependencies, analytics, tracking pixels or third-party font requests.
 
 GitHub Pages is configured to deploy using Actions. Only `dist/` is uploaded. Changes in `main` trigger validation and publication; pull requests validate without deployment. For a custom domain, configure it in repository Settings → Pages and update `siteUrl` before publishing; do not add a DNS record unless you control the domain.
+
+## Repository access
+
+GitHub rulesets restrict creation, updates and deletion of all branches and tags to the `sgprg` account (user ID `304836510`). No app, deploy key or collaborator has a bypass. A separate rule blocks deletion and force pushes to `main`, including by the owner. Normal owner commits and `npm run publish` continue to work.
+
+- [Owner-only branch changes](https://github.com/sgprg/sgprg.github.io/rules/23870161)
+- [Owner-only tag changes](https://github.com/sgprg/sgprg.github.io/rules/23870174)
+- [Protect main history](https://github.com/sgprg/sgprg.github.io/rules/23870176)
+
+All outside contributors require approval before their pull request workflows run. Workflow tokens have read-only repository access and cannot approve pull requests. The deployment job runs only for `sgprg` on this repository's `main` branch; the Pages environment also permits only `main`. These settings were verified on 23 September 2026; repository access rules are configured in GitHub Settings and are not applied by cloning this repository.
+
+The repository remains public. Visitors can read or fork the code and propose pull requests, but cannot change this repository or its deployed site. Owner authentication remains required for publishing.
 
 ## Content and asset rights
 
