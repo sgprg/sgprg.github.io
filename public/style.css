@@ -222,6 +222,7 @@ h1 {
   filter: grayscale(1);
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center top;
 }
 .portrait-corner {
   position: absolute;
@@ -638,7 +639,7 @@ details ul {
   justify-self: end;
   max-width: 100%;
 }
-.email-link {
+.booking-link {
   display: flex;
   gap: 50px;
   justify-content: space-between;
@@ -653,16 +654,6 @@ details ul {
   display: flex;
   gap: 36px;
   margin-top: 24px;
-}
-.copy-email {
-  font-size: 0.75rem;
-  color: var(--muted);
-  border: 0;
-  padding: 8px 0;
-  background: none;
-  cursor: pointer;
-  margin-top: 21px;
-  text-align: left;
 }
 footer {
   border-top: 1px solid var(--line);
@@ -921,7 +912,7 @@ footer {
   .contact-links {
     justify-self: stretch;
   }
-  .email-link {
+  .booking-link {
     gap: 20px;
   }
   .contact-section h2 {
@@ -1130,7 +1121,7 @@ footer {
     width: 100%;
     max-width: 400px;
   }
-  .email-link {
+  .booking-link {
     font-size: 1.7rem;
   }
   .contact-section h2 {
@@ -1180,7 +1171,6 @@ footer {
 @media print {
   .site-header,
   .hero-actions,
-  .copy-email,
   footer,
   .skip-link {
     display: none;

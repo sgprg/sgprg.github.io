@@ -46,7 +46,7 @@ const groups = [
     description:
       "Public contact details, canonical website address and the invitation to get in touch.",
     fields: [
-      "email",
+      "bookingUrl",
       "linkedin",
       "github",
       "siteUrl",
@@ -102,6 +102,7 @@ templates.projects = {
   focus: "Area of focus",
 };
 const labels = {
+  bookingUrl: "Meeting booking URL",
   siteUrl: "Website URL",
   aboutTitle: "About heading",
   contactTitle: "Contact heading",
@@ -241,11 +242,9 @@ function field(path, value) {
   input.name = path.join(".");
   if (input.tagName === "INPUT")
     input.type =
-      key === "email"
-        ? "email"
-        : ["url", "linkedin", "github", "siteUrl"].includes(key)
-          ? "url"
-          : "text";
+      ["url", "bookingUrl", "linkedin", "github", "siteUrl"].includes(key)
+        ? "url"
+        : "text";
   input.required = key !== "url";
   if (input.tagName === "TEXTAREA")
     input.rows = Math.min(7, Math.max(2, Math.ceil(String(value).length / 65)));

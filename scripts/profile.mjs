@@ -9,7 +9,7 @@ export function validateProfile(p) {
     "name",
     "role",
     "location",
-    "email",
+    "bookingUrl",
     "linkedin",
     "github",
     "siteUrl",
@@ -38,9 +38,8 @@ export function validateProfile(p) {
         `${label} must be a complete https URL without credentials.`,
       );
   };
-  for (const key of ["linkedin", "github", "siteUrl"]) secureUrl(p[key], key);
-  if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(p.email))
-    throw new Error("Enter a valid email address.");
+  for (const key of ["bookingUrl", "linkedin", "github", "siteUrl"])
+    secureUrl(p[key], key);
   if (
     !/^\d{4}-\d{2}-\d{2}$/.test(p.updated) ||
     Number.isNaN(Date.parse(p.updated))

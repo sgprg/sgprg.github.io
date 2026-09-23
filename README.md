@@ -35,7 +35,7 @@ The visual editor runs **only on your computer**. There is no public write API, 
 ## Content
 
 - `content/profile.json` — all biography, experience, expertise, project, writing and contact content.
-- `public/assets/sergey-goncharov.jpg` — portrait; replace this file to update the photo.
+- `public/assets/sergey-goncharov.png` — portrait; replace this file to update the photo.
 - `public/style.css` — layout, colors and typography.
 - `scripts/build.mjs` — static biography and CV templates.
 - `editor/` and `scripts/server.mjs` — local visual editor, excluded from the deployed output.
