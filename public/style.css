@@ -222,7 +222,6 @@ h1 {
   filter: grayscale(1);
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center top;
 }
 .portrait-corner {
   position: absolute;

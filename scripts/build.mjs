@@ -41,7 +41,7 @@ export function renderProfile(input) {
 <div class="hero-copy"><p class="eyebrow">${e(p.name)} <span>/</span> ${e(p.location)}</p><h1 id="hero-title">${lines(p.headline)}</h1><p class="hero-role">${e(p.role)}</p><p class="hero-intro">${e(p.intro)}</p>
 <div class="hero-actions"><a class="button primary" href="#experience">Career & achievements <span aria-hidden="true">↓</span></a><a class="text-link" href="./cv/">View & print CV ${arrow}</a></div>
 <p class="current-role"><span class="small-line" aria-hidden="true"></span>${e(p.current)}</p></div>
-<figure class="portrait"><div class="portrait-frame"><img src="./assets/sergey-goncharov.png" alt="${e(p.name)}" width="429" height="653" fetchpriority="high"><span class="portrait-corner" aria-hidden="true">SG /</span></div><figcaption><span>Architecture meets product.</span><span>Prague / Global</span></figcaption></figure>
+<figure class="portrait"><div class="portrait-frame"><img src="./assets/sergey-goncharov.jpg" alt="${e(p.name)}" width="450" height="450" fetchpriority="high"><span class="portrait-corner" aria-hidden="true">SG /</span></div><figcaption><span>Architecture meets product.</span><span>Prague / Global</span></figcaption></figure>
 </section>
 <div class="career-strip page-width" aria-label="Career across"><span>Built on experience at</span><div><span>HP / HPE</span><span>Red Hat</span><span>Mirantis</span><span>Virtuozzo</span></div></div>
 <section id="about" class="section page-width" aria-labelledby="about-title">${label("01", "Perspective")}<div class="section-body"><h2 id="about-title">${lines(p.aboutTitle)}</h2><div class="about-copy">${p.about.map((t) => `<p>${e(t)}</p>`).join("")}</div><div class="expertise-grid">${p.expertise.map((x, i) => `<article><span class="micro-index">0${i + 1}</span><h3>${e(x.title)}</h3><p>${e(x.description)}</p>${tags(x.skills)}</article>`).join("")}</div></div></section>
@@ -74,7 +74,7 @@ export async function build({
   for (const file of [
     "assets/inter-latin.woff2",
     "assets/favicon.svg",
-    "assets/sergey-goncharov.png",
+    "assets/sergey-goncharov.jpg",
     "app.js",
     "cv.js",
     "style.css",

@@ -35,7 +35,7 @@ try {
     );
   const allowed = [
     "content/profile.json",
-    "public/assets/sergey-goncharov.png",
+    "public/assets/sergey-goncharov.jpg",
   ];
   const changed = run("git", ["diff", "--name-only"], true)
     .split("\n")
