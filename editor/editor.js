@@ -13,7 +13,7 @@ const labels={siteUrl:'Website URL',aboutTitle:'About heading',contactTitle:'Con
 const longFields=new Set(['intro','about','headline','aboutTitle','contactTitle','contactText','summary','description','additionalExperience','projectsNote','highlights']);
 let profile,revision,token,active=0,dirty=false,saving=false;
 const form=document.getElementById('profile-form'), status=document.getElementById('status'), save=document.getElementById('save');
-const title=key=>labels[key]||key.replace(/([A-Z])/g,' $1').replace(/^./,c=>c.toUpperCase());
+const title=key=>typeof key==='number'?String(key+1):(labels[key]||key.replace(/([A-Z])/g,' $1').replace(/^./,c=>c.toUpperCase()));
 const get=path=>path.reduce((obj,key)=>obj[key],profile);
 function set(path,value){const parent=get(path.slice(0,-1));parent[path.at(-1)]=value;markDirty();}
 function markDirty(){dirty=true;save.disabled=false;status.removeAttribute('data-error');status.textContent='Unsaved changes. Save to update the preview.';}
@@ -52,14 +52,14 @@ function render(){
 }
 groups.forEach((g,i)=>{const button=control(g.name,g.name,()=>{active=i;render();});document.getElementById('sections').append(button);});
 form.addEventListener('submit',async event=>{
-  event.preventDefault();if(saving)return;saving=true;save.disabled=true;save.textContent='Saving…';
+  event.preventDefault();if(saving)return;saving=true;save.disabled=true;form.inert=true;save.textContent='Saving…';
   try{
     const response=await fetch('/api/profile',{method:'POST',headers:{'Content-Type':'application/json','X-Edit-Token':token},body:JSON.stringify({profile,revision})});
     const result=await response.json();if(!response.ok)throw new Error(result.error||'Could not save.');
     revision=result.revision;profile.updated=result.updated;dirty=false;status.removeAttribute('data-error');status.textContent=result.message;
     document.querySelector('iframe').src='/?saved='+Date.now();
   }catch(error){status.textContent=error.message;status.setAttribute('data-error','');save.disabled=false;}
-  finally{saving=false;save.textContent='Save changes';}
+  finally{saving=false;form.inert=false;save.textContent='Save changes';}
 });
 window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
 try{const response=await fetch('/api/profile');if(!response.ok)throw new Error('Start the local editor with npm run edit.');const data=await response.json();({profile,revision,token}=data);render();status.textContent='Ready. Choose a section to edit.';}catch(error){status.textContent=error.message;status.setAttribute('data-error','');}

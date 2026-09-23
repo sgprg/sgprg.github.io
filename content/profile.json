@@ -7,7 +7,7 @@
   "github": "https://github.com/sgprg",
   "siteUrl": "https://sgprg.github.io/",
   "headline": "From infrastructure.\nInto intelligence.",
-  "intro": "I turn complex infrastructure into products people can use. My work connects cloud platforms, Kubernetes and agentic AI—with the architecture, security and economics to make them work in practice.",
+  "intro": "I turn complex infrastructure into products people can use. My work connects cloud platforms, Kubernetes and agentic AI with the architecture, security and economics to make them work in practice.",
   "current": "Group Technical Product Manager at Virtuozzo",
   "aboutTitle": "An architect’s depth.\nA product leader’s perspective.",
   "about": [
@@ -16,35 +16,167 @@
     "I’m especially interested in bringing agents and local LLMs into existing environments while preserving control over execution, data access and operational responsibility."
   ],
   "expertise": [
-    { "title": "AI infrastructure & agents", "description": "Local inference, RAG, agent execution environments and the boundaries around identity, context and tool access.", "skills": ["LLM deployment", "Agentic systems", "RAG", "TensorFlow"] },
-    { "title": "Cloud & platform architecture", "description": "A foundation across the full infrastructure stack, from physical systems to service platforms and multi-tenant environments.", "skills": ["Kubernetes", "OpenStack", "Virtualization", "Storage & networking"] },
-    { "title": "Technical product leadership", "description": "Product strategy grounded in architecture, customer discovery, adoption and the economics of running enterprise platforms.", "skills": ["Product strategy", "Platform modernization", "Technical presales", "Open source"] }
+    {
+      "title": "AI infrastructure & agents",
+      "description": "Local inference, RAG, agent execution environments and the boundaries around identity, context and tool access.",
+      "skills": [
+        "LLM deployment",
+        "Agentic systems",
+        "RAG",
+        "TensorFlow"
+      ]
+    },
+    {
+      "title": "Cloud & platform architecture",
+      "description": "A foundation across the full infrastructure stack, from physical systems to service platforms and multi-tenant environments.",
+      "skills": [
+        "Kubernetes",
+        "OpenStack",
+        "Virtualization",
+        "Storage & networking"
+      ]
+    },
+    {
+      "title": "Technical product leadership",
+      "description": "Product strategy grounded in architecture, customer discovery, adoption and the economics of running enterprise platforms.",
+      "skills": [
+        "Product strategy",
+        "Platform modernization",
+        "Technical presales",
+        "Open source"
+      ]
+    }
   ],
   "vectors": [
-    { "name": "Efficiency", "description": "Make the resource cost visible." },
-    { "name": "Security", "description": "Define and enforce trust boundaries." },
-    { "name": "Performance", "description": "Measure what matters in practice." },
-    { "name": "Versatility", "description": "Work with the systems people have." },
-    { "name": "Reliability", "description": "Build for the day after deployment." }
+    {
+      "name": "Efficiency",
+      "description": "Make the resource cost visible."
+    },
+    {
+      "name": "Security",
+      "description": "Define and enforce trust boundaries."
+    },
+    {
+      "name": "Performance",
+      "description": "Measure what matters in practice."
+    },
+    {
+      "name": "Versatility",
+      "description": "Work with the systems people have."
+    },
+    {
+      "name": "Reliability",
+      "description": "Build for the day after deployment."
+    }
   ],
   "experience": [
-    { "company": "Virtuozzo", "role": "Group Technical Product Manager", "period": "Aug 2025 — present", "summary": "Shaping cloud platforms for service providers and sovereign cloud environments, with a focus on the infrastructure needed for AI workloads.", "highlights": ["Virtualization, system containers and platform orchestration.", "Agent execution environments and on-premise LLM infrastructure."], "tags": ["AI infrastructure", "Cloud platforms", "Product leadership"] },
-    { "company": "Mirantis", "role": "Principal Product Manager", "period": "Jun 2021 — Aug 2025", "summary": "Owned the vision and strategy for Mirantis Kubernetes Engine. Led the initiative to move MKE from its Docker Enterprise foundation toward a Kubernetes-native platform.", "highlights": ["Enterprise Kubernetes product strategy and platform evolution.", "Connecting customer requirements, architectural direction and delivery."], "tags": ["Kubernetes", "MKE", "Platform modernization"] },
-    { "company": "Red Hat", "role": "Principal Product Manager · Senior Solution Architect", "period": "Aug 2016 — Jul 2021", "summary": "Progressed from enterprise cloud architecture into product management for the Red Hat Insights portfolio.", "highlights": ["Principal Product Manager, Nov 2019 — Jul 2021: Red Hat Insights.", "Senior Solution Architect, Aug 2016 — Nov 2019: cloud infrastructure, software-defined storage and SAP across CEE."], "tags": ["Red Hat Insights", "Hybrid cloud", "Solution architecture"] },
-    { "company": "HP / Hewlett Packard Enterprise", "role": "Enterprise Solution Architect · Technical Presales Specialist", "period": "Apr 2011 — Jul 2016", "summary": "Designed and explained enterprise infrastructure across compute, storage, networking and cloud, progressing from technical presales to solution architecture.", "highlights": ["Pan-EMEA subject-matter expertise in 3PAR, ProCurve, cloud and OpenStack."], "tags": ["Enterprise infrastructure", "Technical presales", "EMEA"] }
+    {
+      "company": "Virtuozzo",
+      "role": "Group Technical Product Manager",
+      "period": "Aug 2025 — present",
+      "summary": "Shaping cloud platforms for service providers and sovereign cloud environments, with a focus on the infrastructure needed for AI workloads.",
+      "highlights": [
+        "Virtualization, system containers and platform orchestration.",
+        "Agent execution environments and on-premise LLM infrastructure."
+      ],
+      "tags": [
+        "AI infrastructure",
+        "Cloud platforms",
+        "Product leadership"
+      ]
+    },
+    {
+      "company": "Mirantis",
+      "role": "Principal Product Manager",
+      "period": "Jun 2021 — Aug 2025",
+      "summary": "Owned the vision and strategy for Mirantis Kubernetes Engine. Led the initiative to move MKE from its Docker Enterprise foundation toward a Kubernetes-native platform.",
+      "highlights": [
+        "Enterprise Kubernetes product strategy and platform evolution.",
+        "Connecting customer requirements, architectural direction and delivery."
+      ],
+      "tags": [
+        "Kubernetes",
+        "MKE",
+        "Platform modernization"
+      ]
+    },
+    {
+      "company": "Red Hat",
+      "role": "Principal Product Manager · Senior Solution Architect",
+      "period": "Aug 2016 — Jul 2021",
+      "summary": "Progressed from enterprise cloud architecture into product management for the Red Hat Insights portfolio.",
+      "highlights": [
+        "Principal Product Manager, Nov 2019 — Jul 2021: Red Hat Insights.",
+        "Senior Solution Architect, Aug 2016 — Nov 2019: cloud infrastructure, software-defined storage and SAP across CEE."
+      ],
+      "tags": [
+        "Red Hat Insights",
+        "Hybrid cloud",
+        "Solution architecture"
+      ]
+    },
+    {
+      "company": "HP / Hewlett Packard Enterprise",
+      "role": "Enterprise Solution Architect · Technical Presales Specialist",
+      "period": "Apr 2011 — Jul 2016",
+      "summary": "Designed and explained enterprise infrastructure across compute, storage, networking and cloud, progressing from technical presales to solution architecture.",
+      "highlights": [
+        "Pan-EMEA subject-matter expertise in 3PAR, ProCurve, cloud and OpenStack."
+      ],
+      "tags": [
+        "Enterprise infrastructure",
+        "Technical presales",
+        "EMEA"
+      ]
+    }
   ],
   "additionalExperience": "Alongside my Red Hat role, I consulted on TensorFlow deployments using Docker Swarm (2018–2020). Earlier work at Urbana Technologies and ČSOB Pojišťovna built my foundation in business intelligence and enterprise data systems.",
   "projects": [
-    { "name": "ANB", "subtitle": "Agentic Networking Bill / Benchmark", "status": "Open source · Early prototype", "description": "Making the network activity of an agent task understandable. ANB validates observations and produces readable receipts of recorded activity, outcomes and unknowns.", "focus": "Agent accountability / Resource efficiency", "url": "https://github.com/sgprg/ANB", "linkLabel": "Explore the repository" },
-    { "name": "Little Letter Studio", "subtitle": "A small product for little hands", "status": "Open source · Web alpha", "description": "A free, offline-first coloring app for children and caregivers, in English, Russian and Czech. A practical exercise in making software simple, private and accessible.", "focus": "Product design / Offline-first software", "url": "https://sgprg.github.io/little-letter-studio/", "linkLabel": "Try the web alpha" }
+    {
+      "name": "ANB",
+      "subtitle": "Agentic Networking Bill / Benchmark",
+      "status": "Open source · Early prototype",
+      "description": "Making the network activity of an agent task understandable. ANB validates observations and produces readable receipts of recorded activity, outcomes and unknowns.",
+      "focus": "Agent accountability / Resource efficiency",
+      "url": "https://github.com/sgprg/ANB",
+      "linkLabel": "Explore the repository"
+    },
+    {
+      "name": "Little Letter Studio",
+      "subtitle": "A small product for little hands",
+      "status": "Open source · Web alpha",
+      "description": "A free, offline-first coloring app for children and caregivers, in English, Russian and Czech. A practical exercise in making software simple, private and accessible.",
+      "focus": "Product design / Offline-first software",
+      "url": "https://sgprg.github.io/little-letter-studio/",
+      "linkLabel": "Try the web alpha"
+    }
   ],
   "projectsNote": "Alongside these public projects, I’m developing independent initiatives in agent infrastructure and governed data access. More to share as they reach public release.",
   "writing": [
-    { "title": "My AI agent needs a network receipt.", "topic": "Agent infrastructure", "publication": "LinkedIn", "url": "https://www.linkedin.com/pulse/my-ai-agent-needs-network-receipt-sergey-goncharov-yyjjf/" },
-    { "title": "Your Personal Defensive Model Is Not a Luxury", "topic": "Security & local AI", "publication": "Medium", "url": "https://medium.com/@sgprg/your-personal-defensive-model-is-not-a-luxury-19cfc273066e" },
-    { "title": "The Cognitive Trap and the Data Graveyard", "topic": "AI & product thinking", "publication": "LinkedIn", "url": "https://www.linkedin.com/pulse/cognitive-trap-data-graveyard-sergey-goncharov-eklvf/" }
+    {
+      "title": "My AI agent needs a network receipt.",
+      "topic": "Agent infrastructure",
+      "publication": "LinkedIn",
+      "url": "https://www.linkedin.com/pulse/my-ai-agent-needs-network-receipt-sergey-goncharov-yyjjf/"
+    },
+    {
+      "title": "Your Personal Defensive Model Is Not a Luxury",
+      "topic": "Security & local AI",
+      "publication": "Medium",
+      "url": "https://medium.com/@sgprg/your-personal-defensive-model-is-not-a-luxury-19cfc273066e"
+    },
+    {
+      "title": "The Cognitive Trap and the Data Graveyard",
+      "topic": "AI & product thinking",
+      "publication": "LinkedIn",
+      "url": "https://www.linkedin.com/pulse/cognitive-trap-data-graveyard-sergey-goncharov-eklvf/"
+    }
   ],
-  "credentials": ["IBM AI Product Management", "AIPMM CDPM & CPMM", "HP MASE Storage Solutions Architect"],
+  "credentials": [
+    "IBM AI Product Management",
+    "AIPMM CDPM & CPMM",
+    "HP MASE Storage Solutions Architect"
+  ],
   "education": "Applied Informatics · University of Hradec Králové · 2006–2010",
   "languages": "English, Czech, Russian, Ukrainian · Elementary German",
   "contactTitle": "Let’s build something\nworth running.",
