@@ -41,7 +41,7 @@ The visual editor runs **only on your computer**. There is no public write API, 
 - `editor/` and `scripts/server.mjs` — local visual editor, excluded from the deployed output.
 - `docs/DESIGN.md` — design research and rationale.
 
-Add projects through the visual editor or by copying one project entry in the JSON array. Use a precise `status` such as “Early prototype”, “Web alpha” or “In development”. Set `url` to an empty string for projects without a public destination; the link is then omitted. Keep `linkLabel` as nonempty text. Use HTTPS links. Text fields are plain text, not HTML or Markdown.
+The biography leads with career experience and specific contributions. The **Achievements** editor section maintains the selected contributions; **Current focus** maintains a compact list of independent initiative goals. The count updates automatically. Describe visions and goals without product names or repository links. Omit the children's play application. Keep any financial or adoption figures out until the underlying evidence has been reconciled. Text fields are plain text, not HTML or Markdown; publication and contact links use HTTPS.
 
 The CV at `/cv/` is generated from the same content. Click **Print / Save as PDF** and select A4 paper; browser header/footer settings are optional. This keeps future CV exports aligned with the site. The original private CVs and assessments are not part of this repository.
 

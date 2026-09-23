@@ -1,1 +1,3 @@
-document.getElementById('print-cv').addEventListener('click', () => window.print());
+document
+  .getElementById("print-cv")
+  .addEventListener("click", () => window.print());

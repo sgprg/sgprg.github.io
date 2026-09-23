@@ -1,1 +1,189 @@
-*{box-sizing:border-box}body{font-family:Arial,sans-serif;color:#17211f;background:#e9ece6;margin:0;font-size:15px;line-height:1.55}a{color:#254d2e}main{width:min(860px,100%);margin:24px auto;background:white;padding:55px 65px}h1,h2,h3,p{margin:0}h1{font-size:34px;letter-spacing:-1px}.role{font-size:17px;margin:5px 0 10px}header{border-bottom:2px solid #17211f;padding-bottom:20px}header p:last-child{font-size:13px}section{margin-top:25px}h2{font-size:15px;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #d7ddd5;padding-bottom:7px;margin-bottom:13px}h3{font-size:16px}p{margin:7px 0}article{margin:20px 0;break-inside:avoid}ul{padding-left:20px;margin:8px 0}.job-heading{display:flex;justify-content:space-between;gap:20px}.job-heading span{font-size:12px;white-space:nowrap}.job-role{font-weight:bold;font-size:13px}.status{font-size:11px;font-weight:normal;margin-left:8px}.cv-toolbar{width:min(860px,calc(100% - 36px));margin:25px auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.cv-toolbar button{background:#17211f;color:white;padding:12px 16px;border:0;border-radius:3px;font:inherit;cursor:pointer}.cv-toolbar button:focus-visible{outline:3px solid #648c3d;outline-offset:4px}@media(max-width:600px){main{padding:28px 22px}.job-heading{flex-direction:column;gap:4px}.cv-toolbar{font-size:13px}h1{font-size:29px}.status{display:block;margin-left:0}}@page{size:A4;margin:14mm 17mm}@media print{body{background:white;font-size:10pt;line-height:1.4}main{padding:0;width:auto;margin:0}.cv-toolbar{display:none}h1{font-size:25pt}.role{font-size:12pt}header p:last-child{font-size:9pt}header{padding-bottom:12px}section{margin-top:18px}h2{font-size:11pt;break-after:avoid}h3{font-size:11pt}.job-role{font-size:9.5pt}.job-heading span{font-size:9pt}article{margin:14px 0}a{color:inherit;text-decoration:none}a[href^="https://"]{overflow-wrap:anywhere}p{orphans:3;widows:3}.status{font-size:8pt}}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #17211f;
+  background: #e9ece6;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+a {
+  color: #254d2e;
+}
+main {
+  width: min(860px, 100%);
+  margin: 24px auto;
+  background: white;
+  padding: 55px 65px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+.role {
+  font-size: 17px;
+  margin: 5px 0 10px;
+}
+header {
+  border-bottom: 2px solid #17211f;
+  padding-bottom: 20px;
+}
+header p:last-child {
+  font-size: 13px;
+}
+section {
+  margin-top: 25px;
+}
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #d7ddd5;
+  padding-bottom: 7px;
+  margin-bottom: 13px;
+}
+h3 {
+  font-size: 16px;
+}
+p {
+  margin: 7px 0;
+}
+article {
+  margin: 20px 0;
+  break-inside: avoid;
+}
+ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+.job-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.job-heading span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.job-role {
+  font-weight: bold;
+  font-size: 13px;
+}
+.status {
+  font-size: 11px;
+  font-weight: normal;
+  margin-left: 8px;
+}
+.cv-toolbar {
+  width: min(860px, calc(100% - 36px));
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.cv-toolbar button {
+  background: #17211f;
+  color: white;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 3px;
+  font: inherit;
+  cursor: pointer;
+}
+.cv-toolbar button:focus-visible {
+  outline: 3px solid #648c3d;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 28px 22px;
+  }
+  .job-heading {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .cv-toolbar {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  .status {
+    display: block;
+    margin-left: 0;
+  }
+}
+@page {
+  size: A4;
+  margin: 14mm 17mm;
+}
+@media print {
+  body {
+    background: white;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  main {
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+  .cv-toolbar {
+    display: none;
+  }
+  h1 {
+    font-size: 25pt;
+  }
+  .role {
+    font-size: 12pt;
+  }
+  header p:last-child {
+    font-size: 9pt;
+  }
+  header {
+    padding-bottom: 12px;
+  }
+  section {
+    margin-top: 18px;
+  }
+  h2 {
+    font-size: 11pt;
+    break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+  }
+  .job-role {
+    font-size: 9.5pt;
+  }
+  .job-heading span {
+    font-size: 9pt;
+  }
+  article {
+    margin: 14px 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a[href^="https://"]
+  {
+    overflow-wrap: anywhere;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  .status {
+    font-size: 8pt;
+  }
+}

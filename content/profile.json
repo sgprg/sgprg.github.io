@@ -19,12 +19,7 @@
     {
       "title": "AI infrastructure & agents",
       "description": "Local inference, RAG, agent execution environments and the boundaries around identity, context and tool access.",
-      "skills": [
-        "LLM deployment",
-        "Agentic systems",
-        "RAG",
-        "TensorFlow"
-      ]
+      "skills": ["LLM deployment", "Agentic systems", "RAG", "TensorFlow"]
     },
     {
       "title": "Cloud & platform architecture",
@@ -79,11 +74,7 @@
         "Virtualization, system containers and platform orchestration.",
         "Agent execution environments and on-premise LLM infrastructure."
       ],
-      "tags": [
-        "AI infrastructure",
-        "Cloud platforms",
-        "Product leadership"
-      ]
+      "tags": ["AI infrastructure", "Cloud platforms", "Product leadership"]
     },
     {
       "company": "Mirantis",
@@ -94,11 +85,7 @@
         "Enterprise Kubernetes product strategy and platform evolution.",
         "Connecting customer requirements, architectural direction and delivery."
       ],
-      "tags": [
-        "Kubernetes",
-        "MKE",
-        "Platform modernization"
-      ]
+      "tags": ["Kubernetes", "MKE", "Platform modernization"]
     },
     {
       "company": "Red Hat",
@@ -109,11 +96,7 @@
         "Principal Product Manager, Nov 2019 — Jul 2021: Red Hat Insights.",
         "Senior Solution Architect, Aug 2016 — Nov 2019: cloud infrastructure, software-defined storage and SAP across CEE."
       ],
-      "tags": [
-        "Red Hat Insights",
-        "Hybrid cloud",
-        "Solution architecture"
-      ]
+      "tags": ["Red Hat Insights", "Hybrid cloud", "Solution architecture"]
     },
     {
       "company": "HP / Hewlett Packard Enterprise",
@@ -123,35 +106,33 @@
       "highlights": [
         "Pan-EMEA subject-matter expertise in 3PAR, ProCurve, cloud and OpenStack."
       ],
-      "tags": [
-        "Enterprise infrastructure",
-        "Technical presales",
-        "EMEA"
-      ]
+      "tags": ["Enterprise infrastructure", "Technical presales", "EMEA"]
     }
   ],
   "additionalExperience": "Alongside my Red Hat role, I consulted on TensorFlow deployments using Docker Swarm (2018–2020). Earlier work at Urbana Technologies and ČSOB Pojišťovna built my foundation in business intelligence and enterprise data systems.",
   "projects": [
     {
-      "name": "ANB",
-      "subtitle": "Agentic Networking Bill / Benchmark",
-      "status": "Open source · Early prototype",
-      "description": "Making the network activity of an agent task understandable. ANB validates observations and produces readable receipts of recorded activity, outcomes and unknowns.",
-      "focus": "Agent accountability / Resource efficiency",
-      "url": "https://github.com/sgprg/ANB",
-      "linkLabel": "Explore the repository"
+      "name": "Accountable access for agents",
+      "description": "Give agentic systems a controlled way to access protected data, with task-bound authorization and verifiable evidence of release or refusal.",
+      "focus": "Security / Governed data access"
     },
     {
-      "name": "Little Letter Studio",
-      "subtitle": "A small product for little hands",
-      "status": "Open source · Web alpha",
-      "description": "A free, offline-first coloring app for children and caregivers, in English, Russian and Czech. A practical exercise in making software simple, private and accessible.",
-      "focus": "Product design / Offline-first software",
-      "url": "https://sgprg.github.io/little-letter-studio/",
-      "linkLabel": "Try the web alpha"
+      "name": "A platform for mixed workloads",
+      "description": "Bring VMs, containers, applications and agents into a coherent operating model, with efficient execution and strong tenant isolation.",
+      "focus": "Cloud architecture / Agent execution"
+    },
+    {
+      "name": "Operational intelligence for hospitality",
+      "description": "Explore how agentic capabilities can help hospitality businesses understand their operations while keeping privacy and tenant boundaries central to the design.",
+      "focus": "Applied AI / Product strategy"
+    },
+    {
+      "name": "Resource accountability for agent tasks",
+      "description": "Make recorded network activity and outcomes of agent tasks understandable, so useful work, retries and unknowns can be considered together.",
+      "focus": "Efficiency / Observability"
     }
   ],
-  "projectsNote": "Alongside these public projects, I’m developing independent initiatives in agent infrastructure and governed data access. More to share as they reach public release.",
+  "projectsNote": "These independent initiatives are a continuation of my infrastructure and product work. They remain in development; their descriptions express direction and goals.",
   "writing": [
     {
       "title": "My AI agent needs a network receipt.",
@@ -180,6 +161,23 @@
   "education": "Applied Informatics · University of Hradec Králové · 2006–2010",
   "languages": "English, Czech, Russian, Ukrainian · Elementary German",
   "contactTitle": "Let’s build something\nworth running.",
-  "contactText": "Interested in AI architecture, infrastructure product leadership, or collaborating on an open-source project? I’d be glad to compare notes.",
-  "updated": "2026-09-23"
+  "contactText": "Interested in AI architecture, infrastructure product leadership, or a difficult platform decision? I would be glad to compare notes.",
+  "updated": "2026-09-23",
+  "achievements": [
+    {
+      "title": "Kubernetes platform renewal",
+      "context": "Mirantis",
+      "description": "Led the MKE3-to-MKE4 initiative, moving an established enterprise platform from its Docker Enterprise foundation toward Kubernetes-native architecture."
+    },
+    {
+      "title": "Product ownership for Red Hat Insights",
+      "context": "Red Hat",
+      "description": "Owned product-management responsibilities for the Red Hat Insights portfolio, bringing customer-facing architecture experience into enterprise software product decisions."
+    },
+    {
+      "title": "Enterprise architecture across EMEA",
+      "context": "HP / HPE",
+      "description": "Served as a pan-EMEA subject-matter expert across storage, networking, cloud and OpenStack, helping customers navigate complex infrastructure decisions."
+    }
+  ]
 }

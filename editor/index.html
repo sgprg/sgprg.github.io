@@ -1,1 +1,53 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Edit your biography</title><link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="/edit/editor.css"><script src="/edit/editor.js" type="module"></script></head><body><header><div><a href="/" target="_blank">sg /</a><h1>Edit your biography</h1><p>Changes are saved on this computer. Publish when you’re ready.</p></div><button id="save" type="submit" form="profile-form" disabled>Save changes</button></header><div class="workspace"><aside><nav id="sections" aria-label="Editor sections"></nav><div class="publish-note"><strong>To update the live site</strong><p>Save your changes, then run <code>npm run publish</code> in the project folder.</p><a href="https://github.com/sgprg/sgprg.github.io/edit/main/content/profile.json" target="_blank" rel="noopener noreferrer">Or edit on GitHub ↗</a></div></aside><main><p id="status" role="status">Loading your profile…</p><form id="profile-form"></form></main><section class="preview"><div><h2>Saved preview</h2><a href="/" target="_blank">Open full page ↗</a></div><iframe src="/" title="Biography preview"></iframe></section></div></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Edit your biography</title>
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/edit/editor.css" />
+    <script src="/edit/editor.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/" target="_blank">sg /</a>
+        <h1>Edit your biography</h1>
+        <p>Changes are saved on this computer. Publish when you’re ready.</p>
+      </div>
+      <button id="save" type="submit" form="profile-form" disabled>
+        Save changes
+      </button>
+    </header>
+    <div class="workspace">
+      <aside>
+        <nav id="sections" aria-label="Editor sections"></nav>
+        <div class="publish-note">
+          <strong>To update the live site</strong>
+          <p>
+            Save your changes, then run <code>npm run publish</code> in the
+            project folder.
+          </p>
+          <a
+            href="https://github.com/sgprg/sgprg.github.io/edit/main/content/profile.json"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Or edit on GitHub ↗</a
+          >
+        </div>
+      </aside>
+      <main>
+        <p id="status" role="status">Loading your profile…</p>
+        <form id="profile-form"></form>
+      </main>
+      <section class="preview">
+        <div>
+          <h2>Saved preview</h2>
+          <a href="/" target="_blank">Open full page ↗</a>
+        </div>
+        <iframe src="/" title="Biography preview"></iframe>
+      </section>
+    </div>
+  </body>
+</html>

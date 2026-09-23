@@ -14,7 +14,7 @@ The references are useful examples of clear professional communication. No claim
 
 A typographic, editorial portfolio for a senior infrastructure architect and product leader. A monochrome portrait, ink and white palette, a restrained lime accent, indexed sections and a five-vector panel connect a human introduction with engineering discipline. Typography and whitespace establish hierarchy; there are no simulated terminal panels or decorative performance claims.
 
-The first screen answers who Sergey is, what he works on, where he is based and how to explore his work or CV. The page then develops his perspective, career, independent work, writing and contact options. Career details can expand without forcing every visitor through a long CV.
+The first screen answers who Sergey is, what he works on, where he is based and how to explore his career or CV. The page then develops his perspective, achievements, career, current areas of focus, writing and contact options. Career details can expand without forcing every visitor through a long CV. At Sergey's direction, independent initiatives are described only by their goals and total count, without product names or repository links. The children's application is omitted. Career contributions take priority over work in development.
 
 ## Implementation choices
 
