@@ -1,0 +1,15 @@
+{
+  "name": "sergey-goncharov",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sergey Goncharov — infrastructure, AI, and product leadership.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/server.mjs",
+    "edit": "node scripts/server.mjs --edit",
+    "test": "node --test",
+    "publish": "node scripts/publish.mjs"
+  }
+}
