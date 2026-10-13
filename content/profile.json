@@ -63,6 +63,81 @@
       "description": "Build for the day after deployment."
     }
   ],
+  "interviewTitle": "Show how you think.",
+  "interviewIntro": "In a PM interview, I want to understand how someone gets from a user’s problem to a decision they can defend. This is the path I look for.",
+  "interviewJourney": [
+    {
+      "name": "Frame the problem",
+      "steps": [
+        { "name": "Clarify the user", "description": "Name one specific person and one specific problem. “People who use the app” is too broad." },
+        { "name": "Anchor to the business", "description": "Explain who benefits economically: where the idea makes money or saves it." },
+        { "name": "Pick the right segment", "description": "Choose a group with a real problem, enough scale and a reason for the company to care." },
+        { "name": "Define success first", "description": "Say how you would measure success before proposing a feature." }
+      ]
+    },
+    {
+      "name": "Work through the choices",
+      "steps": [
+        { "name": "Show the trade-offs", "description": "Lay out the alternatives you considered and explain why you chose yours." },
+        { "name": "Give the answer structure", "description": "Take time to organize your reasoning. A quick answer is only useful if people can follow it." },
+        { "name": "State your assumptions", "description": "Make your assumptions explicit so the interviewer can follow and challenge your reasoning." },
+        { "name": "Prioritize", "description": "Rank ideas by impact relative to effort. Be clear about what you would leave out." }
+      ]
+    },
+    {
+      "name": "Make the recommendation",
+      "steps": [
+        { "name": "Follow the user journey", "description": "Locate the problem across the whole experience, beyond a single screen." },
+        { "name": "Return to the goal", "description": "Connect each choice to the success measure you set at the start." },
+        { "name": "Go deep on one idea", "description": "Develop one idea far enough to test its logic, costs and consequences." },
+        { "name": "Summarize your decision", "description": "State your recommendation and the reason for it, clearly and briefly." }
+      ]
+    }
+  ],
+  "growthTitle": "Build the judgment.\nExtend the reach.",
+  "growthIntro": "The PM skills I encourage people to develop, from framing a problem to improving how a team works. Each layer builds on the ones below. Select a layer to explore the practice.",
+  "growthLayers": [
+    {
+      "name": "Sound judgment",
+      "summary": "Define the problem. Make the call.",
+      "practices": [
+        { "name": "Problem definition", "description": "Identify which problems are worth solving before someone assigns them to you.", "tip": "Bring a clear problem framing to your next roadmap review, before discussing features." },
+        { "name": "Judgment under ambiguity", "description": "Make a reasoned call when there is no playbook or clear answer.", "tip": "Record your rationale for a difficult decision: what you knew, what you assumed and why you chose that path. Use that record when discussing your growth." }
+      ]
+    },
+    {
+      "name": "Product direction",
+      "summary": "Connect the work to its value.",
+      "practices": [
+        { "name": "Business impact framing", "description": "Connect features to revenue, retention or a strategic outcome.", "tip": "Write the “so what” for each initiative you own in terms a CFO would understand." },
+        { "name": "Proactive roadmapping", "description": "Enter planning with a point of view on where to invest, beyond the current backlog.", "tip": "Write a one-page investment thesis for your area before the next planning cycle." }
+      ]
+    },
+    {
+      "name": "Wider scope",
+      "summary": "Think beyond your immediate remit.",
+      "practices": [
+        { "name": "Scope expansion", "description": "Make decisions that improve something beyond your own team or product surface.", "tip": "Name one decision this quarter that changed something outside your direct ownership." },
+        { "name": "Strategic altitude", "description": "Connect your work to the decisions made one level above your current role.", "tip": "Rewrite your last project update as a briefing for a VP. Explain the outcome, the trade-off and the decision needed." }
+      ]
+    },
+    {
+      "name": "Earned trust",
+      "summary": "Help decisions move across teams.",
+      "practices": [
+        { "name": "Influence without authority", "description": "Help people across functions reach decisions without relying on formal authority.", "tip": "Track when another team changes direction because of your input, and what made the input useful." },
+        { "name": "Cross-functional credibility", "description": "Build the kind of judgment that other teams seek out before important decisions.", "tip": "Notice who outside your team asks for your view. If no one does, start by finding where your expertise could help them." }
+      ]
+    },
+    {
+      "name": "Stronger teams",
+      "summary": "Make the work clear. Help others grow.",
+      "practices": [
+        { "name": "Organization-level narrative", "description": "Explain why your work matters to the company as a whole.", "tip": "Describe your work in two sentences. Ask someone outside product management to repeat the point back to you." },
+        { "name": "Raise the standard around you", "description": "Help the PMs around you improve how they think, decide and deliver.", "tip": "Ask whether your team ships better work because you are there. Identify one way to make that contribution more useful." }
+      ]
+    }
+  ],
   "experience": [
     {
       "company": "Virtuozzo",

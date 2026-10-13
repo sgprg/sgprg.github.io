@@ -16,6 +16,10 @@ export function validateProfile(p) {
     "intro",
     "current",
     "aboutTitle",
+    "interviewTitle",
+    "interviewIntro",
+    "growthTitle",
+    "growthIntro",
     "additionalExperience",
     "projectsNote",
     "education",
@@ -55,6 +59,8 @@ export function validateProfile(p) {
     achievements: ["title", "context", "description"],
     expertise: ["title", "description"],
     vectors: ["name", "description"],
+    interviewJourney: ["name"],
+    growthLayers: ["name", "summary"],
     experience: ["company", "role", "period", "summary"],
     projects: ["name", "description", "focus"],
     writing: ["title", "topic", "publication", "url"],
@@ -75,8 +81,19 @@ export function validateProfile(p) {
         array(item.tags, label + " tags", text);
       }
       if (key === "expertise") array(item.skills, label + " skills", text);
+      if (key === "interviewJourney" || key === "growthLayers") {
+        const nested = key === "interviewJourney" ? "steps" : "practices";
+        array(item[nested], `${label} ${nested}`, (entry, entryLabel) => {
+          if (!entry || typeof entry !== "object" || Array.isArray(entry))
+            throw new Error(`${entryLabel} must be an object.`);
+          for (const field of nested === "steps" ? ["name", "description"] : ["name", "description", "tip"])
+            text(entry[field], `${entryLabel}: ${field}`);
+        }, 1);
+      }
     });
   }
+  for (const key of ["interviewJourney", "growthLayers"])
+    if (!p[key].length) throw new Error(`${key} must contain at least one item.`);
   const allowed = new Set([
     ...strings,
     "about",

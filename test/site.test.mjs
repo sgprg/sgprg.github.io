@@ -49,6 +49,35 @@ test("incomplete data fails before publishing", () => {
   q.about = [];
   assert.throws(() => validateProfile(q), /About/);
 });
+test("philosophy content validates nested steps and practical tips", () => {
+  for (const key of ["interviewJourney", "growthLayers"]) {
+    const p = structuredClone(original);
+    p[key] = [];
+    assert.throws(() => validateProfile(p), /at least one/);
+  }
+  const p = structuredClone(original);
+  p.interviewJourney[0].steps = [null];
+  assert.throws(() => validateProfile(p), /must be an object/);
+  const q = structuredClone(original);
+  delete q.growthLayers[0].practices[0].tip;
+  assert.throws(() => validateProfile(q), /tip/);
+});
+test("all philosophy content is present without scripting and is escaped", () => {
+  const p = structuredClone(original);
+  p.interviewJourney[0].steps[0].name = '<img src=x onerror="bad()">';
+  p.growthLayers[0].practices[0].tip = "<script>bad()</script>";
+  const html = renderProfile(p);
+  assert.ok(!html.includes(p.interviewJourney[0].steps[0].name));
+  assert.ok(!html.includes(p.growthLayers[0].practices[0].tip));
+  assert.ok(html.includes("&lt;script&gt;bad()&lt;/script&gt;"));
+  for (const phase of original.interviewJourney)
+    for (const step of phase.steps) assert.ok(html.includes(step.description));
+  for (const layer of original.growthLayers)
+    for (const practice of layer.practices) assert.ok(html.includes(practice.description));
+  assert.equal((html.match(/class="journey-number"/g) || []).length, 12);
+  assert.equal((html.match(/class="practice-tip"/g) || []).length, 10);
+  assert.ok(!html.includes('class="philosophy-panel" hidden'));
+});
 test("site and CV are derived from the same content", () => {
   const p = structuredClone(original);
   p.experience[0].company = "A new company & team";
@@ -90,6 +119,8 @@ test("local editor saves, rebuilds both views, and rejects unsafe writes", async
   const snapshot = await (await fetch(origin + "/api/profile")).json();
   const p = structuredClone(original);
   p.intro = "Updated profile from the local editor.";
+  p.growthLayers[0].practices[0].tip = "A revised practical exercise.";
+  p.interviewJourney[0].steps[0].description = "A revised interview step.";
   const send = (headers, body = { profile: p, revision: snapshot.revision }) =>
     fetch(origin + "/api/profile", {
       method: "POST",
@@ -126,6 +157,9 @@ test("local editor saves, rebuilds both views, and rejects unsafe writes", async
     await (await fetch(origin + "/cv/")).text(),
     /Updated profile from the local editor/,
   );
+  const page = await (await fetch(origin + "/")).text();
+  assert.match(page, /A revised practical exercise/);
+  assert.match(page, /A revised interview step/);
   assert.equal(
     JSON.parse(
       await readFile(path.join(directory, "content/profile.json"), "utf8"),

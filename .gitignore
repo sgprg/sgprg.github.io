@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .local/
+.impeccable/review/
 *.log
 .env*
 !.env.example

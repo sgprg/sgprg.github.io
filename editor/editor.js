@@ -10,6 +10,16 @@ const groups = [
     fields: ["aboutTitle", "about", "vectors"],
   },
   {
+    name: "PM interviews",
+    description: "The interview tab: edit the introduction, phases and steps. Steps are numbered automatically.",
+    fields: ["interviewTitle", "interviewIntro", "interviewJourney"],
+  },
+  {
+    name: "PM growth",
+    description: "The growth tab: layers run from the foundation upward. Each practice includes an explanation and a practical tip.",
+    fields: ["growthTitle", "growthIntro", "growthLayers"],
+  },
+  {
     name: "Expertise",
     description: "Explain where you can help, with a focused set of skills.",
     fields: ["expertise"],
@@ -61,6 +71,10 @@ const templates = {
   tags: "New tag",
   highlights: "New highlight",
   vectors: { name: "New principle", description: "Why it matters." },
+  interviewJourney: { name: "New phase", steps: [{ name: "New step", description: "What to look for." }] },
+  steps: { name: "New step", description: "What to look for." },
+  growthLayers: { name: "New layer", summary: "What this layer develops.", practices: [{ name: "New practice", description: "Why it matters.", tip: "A practical next step." }] },
+  practices: { name: "New practice", description: "Why it matters.", tip: "A practical next step." },
   expertise: {
     title: "New expertise",
     description: "Describe the work.",
@@ -114,6 +128,11 @@ const labels = {
   headline: "Main headline",
 };
 const longFields = new Set([
+  "interviewTitle",
+  "interviewIntro",
+  "growthTitle",
+  "growthIntro",
+  "tip",
   "intro",
   "about",
   "headline",

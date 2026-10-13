@@ -38,10 +38,13 @@ The visual editor runs **only on your computer**. There is no public write API, 
 - `public/assets/sergey-goncharov.jpg` — portrait; replace this file to update the photo.
 - `public/style.css` — layout, colors and typography.
 - `scripts/build.mjs` — static biography and CV templates.
+- `scripts/philosophy.mjs` — the three working-philosophy views, interview numbering and growth-stack layout.
 - `editor/` and `scripts/server.mjs` — local visual editor, excluded from the deployed output.
 - `docs/DESIGN.md` — design research and rationale.
 
 The biography leads with career experience and specific contributions. The **Achievements** editor section maintains the selected contributions; **Current focus** maintains a compact list of independent initiative goals. The count updates automatically. Describe visions and goals without product names or repository links. Omit the children's play application. Keep any financial or adoption figures out until the underlying evidence has been reconciled. Text fields are plain text, not HTML or Markdown; publication and contact links use HTTPS.
+
+In **A working philosophy**, **PM interviews** in the editor maintains the title, introduction, phases and steps; numbering follows their saved order automatically. **PM growth** maintains the title, introduction and layers, including each practice's explanation and practical tip. Keep layers in foundation-first order in the editor; the page displays the foundation at the bottom of the stack and opens it first. All three views use `content/profile.json` and remain readable without JavaScript or when printed.
 
 The CV at `/cv/` is generated from the same content. Click **Print / Save as PDF** and select A4 paper; browser header/footer settings are optional. This keeps future CV exports aligned with the site. The original private CVs and assessments are not part of this repository.
 
